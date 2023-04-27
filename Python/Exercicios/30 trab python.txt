@@ -1,0 +1,377 @@
+Aluno: João Pedro Issmael Vieira
+Número de aluno: 22252263
+
+
+1.
+print("Calcular o perímetro e a área de um retângulo")
+base = input("Valor da base:")
+base = int(base)
+h = input("Valor da altura:")
+h = int(h)
+
+area = base * h
+p = (2 * h) + (2 * base)
+
+print("O valor da área é: ", + area)
+print("O valor do perímetro é: ", + p)
+
+2.
+print("Calcular o perímetro e a área de um quadrado")
+lado = input("Valor do lado:")
+lado = int(lado)
+
+area = lado * lado
+p = 4 * lado
+
+print("O valor da área é: ", + area)
+print("O valor do perímetro é: ", + p)
+
+3.
+print("Calcular o perímetro e a área de uma circunferência")
+r = input("Valor do raio:")
+r = float(r)
+pi = 3.14
+
+area = pi * r ** 2
+p = 2 * pi * r 
+
+print("O valor da área é: ", + area)
+print("O valor do perímetro é: ", + p)
+
+4.
+print("Calcular o perímetro de um triângulo")
+l1 = input("Valor do lado 1:")
+l1 = int(l1)
+l2 = input("Valor do lado 2:")
+l2 = int(l2)
+l3 = input("Valor do lado 3:")
+l3 = int(l3)
+
+
+p = l1 + l2 + l3
+
+print("O valor do perímetro é: ", + p)
+
+5.
+print("Encontrar o sucessor do número dado")
+n = input("Número:")
+n = int(n)
+
+sus = n + 1
+
+print("O sucessor do número é:", + sus)
+
+6.
+print("Encontrar o quociente e oresto da divisão de dois números")
+
+n1 = input("Dividendo:")
+n1 = float(n1)
+n2 = input("Divisor:")
+n2 = float(n2)
+
+q = n1/n2
+r = n1%n2
+
+print("O quociente da divisão é:", + q)
+print("O resto da divisão é:" + r)
+
+7.
+print("Transforma dias em anos, meses e dias")
+ndias = input("Quantidade de dias:")
+ndias = int(ndias)
+
+ano = ndias//365
+mes = (ndias % 365) // 30
+dias = (ndias % 365) % 30
+
+print("Anos: ", + ano)
+print("Meses:", + mes)
+print("Dias:", + dias)
+
+8.
+print("Transformar Fahrenheit para Celsius")
+f = input("Temperatura em Fahrenheit: ")
+f = float(f)
+
+c = 5/9 * (f - 32)
+
+print("O valor é:", c , "graus Celsius")
+
+9.
+print("Calcular o volume de uma lata de óleo cilindrica ")
+r = input("Valor do raio:")
+r = float(r)
+h = input("Valor da altura:")
+h = float(h)
+pi = 3.14
+
+vol = (pi * r ** 2) * h
+
+print("O valor do volume é: ", vol)
+
+10.
+print("Ler idade em anos, meses e dias e transformar em dias apenas")
+ano = input("Anos:")
+ano = int(ano)
+mes = input("Meses:")
+mes = int(mes)
+dias = input("Dias:")
+dias = int(dias)
+
+ndias = (ano * 365) + (mes * 30) + dias
+
+print("Idade: ", ndias , "dias")
+
+11.
+print("Ler  o número total de eleitores de um município, o número de votos brancos, nulos e válidos e escrever o percentual que cada um representa em relação ao total de eleitores.")
+branco = input("Branco:")
+branco = float(branco)
+
+nulo = input("Nulo:")
+nulo = float(nulo)
+
+valid = input("Valid:")
+valid = float(valid)
+
+
+total = valid + nulo + branco
+
+pbranco = (branco/total) * 100
+pnulo = (nulo/total) * 100
+pvalid = (valid/total) * 100
+
+print("Votos em branco:", pbranco , "%")
+print("Votos nulos:", pnulo , "%")
+print("Votos válidos:", pvalid , "%")
+
+12.
+print("Ler o salário mensal atual de um funcionário e o percentual de reajuste. Calcular e escrever o valor do novo salário.")
+salario_mensal = input("Salário mensal:")
+salario_mensal = float(salario_mensal)
+
+percentual_reajuste  = input("Percentual de reajuste aditivo:")
+percentual_reajuste = float(percentual_reajuste)
+
+novo_salario = ((percentual_reajuste/100)+1) * salario_mensal
+
+print(f"O novo salário é: {round(novo_salario, 2)} reais")
+
+13.
+print("Calcula o custo final do carro com os impostos acrescentados")
+custo_fabrica = input("Custo de fábrica:")
+custo_fabrica = float(custo_fabrica)
+percentual_distribuidor = (28/100) * custo_fabrica
+impostos = (45/100) * custo_fabrica
+
+
+custo_final = custo_fabrica + percentual_distribuidor + impostos
+
+print(f"O custo final é: {custo_final} reais")
+
+14.
+print("Uma revendedora de carros usados paga a seus funcionários vendedores um salário fixo por mês, mais uma comissão também fixa para cada carro vendido e mais 5% do valor das vendas por ele efetuadas. Escrever um algoritmo que leia o número de carros por ele vendidos, o valor total de suas vendas, o salário fixo e o valor que ele recebe por carro vendido. Calcule e escreva o salário final do vendedor.")
+nmr_carros = int(input("Número de carros vendidos:"))
+valor_total = float(input("Valor total das vendas:"))
+salario_fixo = float(input("Salário fixo:"))
+comissão = float(input("Comissão :"))
+
+salario_final = salario_fixo + (nmr_carros * comissão) + (0.05 * valor_total)
+
+print(f"O salário final do vendedor é {salario_final} reais")
+
+15.
+print("Le um valor e diz se é maior ou menor que 10")
+x = input("Valor:")
+x = float(x)
+
+if x > 10:
+    print(f"O valor {x} é maior que 10")
+elif x < 10:
+    print(f"O valor {x} é menor que 10")
+else:
+    print(f"O valor {x} é igual a 10")
+
+16.
+print("Le um valor e diz se é negativo ou positivo")
+x = input("Valor:")
+x = float(x)
+
+if x > 0:
+    print(f"O valor {x} é positivo")
+elif x < 0:
+    print(f"O valor {x} é negativo")
+else:
+    print(f"O valor {x} é neutro")
+
+17.
+print("Le o número de maçãs compradas, calcula e escreve o custo total da compra dada as condições.")
+nmaça = input("Quantas maçãs foram compradas:")
+nmaça = float(nmaça)
+
+if nmaça < 12 :
+    total = nmaça * 1.30
+    print(f"O total deu {total} reais")
+else:
+    total = nmaça * 1
+    print(f"O total deu {total} reais")
+
+18.
+print("Ler as notas da 1a. e 2a. avaliações de um aluno. Calcular a média aritmética simples e escrever uma mensagem que diga se o aluno foi ou não aprovado (considerar que nota igual ou maior que 6 o aluno é aprovado). Escrever também a média calculada. ")
+n1 = input("1a nota:")
+n1 = float(n1)
+n2 = input("2a nota:")
+n2 = float(n2)
+
+media = (n1 + n2) / 2
+
+if media > 6 :
+    print("O aluno foi aprovado")
+else:
+    print("O aluno foi reprovado")
+
+19.
+print("Ler o ano atual e o ano de nascimento de uma pessoa. Escrever uma mensagem que diga se ela poderá ou não votar este ano (não é necessário considerar o mês em que a pessoa nasceu).")
+ano_atual = input("Ano atual:")
+ano_atual = int(ano_atual)
+nascimento = input("Data de nascimento:")
+nascimento = int(nascimento)
+
+dif = ano_atual - nascimento
+
+
+if dif > 15 :
+    print("Pode votar")
+else:
+    print("Não pode votar")
+
+20.
+print("Ler dois valores (considere que não serão lidos valores iguais) e escrevê-los em ordem crescente.")
+x = input("1o valor:")
+x = int(x)
+y = input("2o valor:")
+y = int(y)
+
+if x > y:
+    print(f"Ordem crescente: {y} e {x}")
+elif x < y:
+    print(f"Ordem crescente: {x} e {y}")
+else:
+    print("Ambos dos valores são iguais")
+
+21.
+print("Ler a hora de início e a hora de fim de um jogo de Xadrez (considere apenas horas inteiras, sem os minutos) e calcule a duração do jogo em horas, sabendo-se que o tempo máximo de duração do jogo é de 24 horas e que o jogo pode iniciar em um dia e terminar no dia seguinte.")
+inicio = input("Início do jogo:")
+inicio = int(inicio)
+fim = input("Fim:")
+fim = int(fim)
+
+if inicio < fim:
+    duração = fim - inicio
+else:
+    duração = 24 - inicio + fim
+
+
+print(f"Duração: {duração} horas")
+
+22.
+print("Ler o salário fixo e o valor das vendas efetuadas pelo vendedor de uma empresa. Sabendo-se que ele recebe uma comissão de 3% sobre o total das vendas até R$ 1.500,00 mais 5% sobre o que ultrapassar este valor, calcular e escrever o seu salário total.")
+salario_fixo = input("Salario fixo:")
+salario_fixo = float(salario_fixo)
+valor_vendas = input("Total vendas:")
+valor_vendas = int(valor_vendas)
+
+if valor_vendas > 1500:
+    salario_total = salario_fixo + (valor_vendas * 0.05)
+else:
+    salario_total = salario_fixo + (valor_vendas * 0.03)
+
+print(f"Salário total: {salario_total} reais")
+
+23.
+print("Faça um algoritmo para ler: número da conta do cliente, saldo, débito e crédito. Após, calcular e escrever o saldo atual (saldo atual = saldo - débito + crédito). Também testar se saldo atual for maior ou igual a zero escrever a mensagem 'Saldo Positivo', senão escrever a mensagem 'Saldo Negativo'.")
+conta = input("Número da conta: ")
+
+saldo = input("Saldo:")
+saldo = float(saldo)
+debito = input("Débito:")
+debito = float(debito)
+credito = input("Crédito:")
+credito = float(credito)
+
+saldo_atual = saldo + credito - debito
+
+if saldo_atual >= 0:
+    print(f"A conta número {conta} está com saldo Positivo")
+else:
+    print(f"A conta número {conta} está com saldo Negativo")
+
+24.
+print("Faça um algoritmo para ler: quantidade atual em estoque, quantidade máxima em estoque e quantidade mínima em estoque de um produto. Calcular e escrever a quantidade média ((quantidade média = quantidade máxima + quantidade mínima)/2). Se a quantidade em estoque for maior ou igual a quantidade média escrever a mensagem 'Não efetuar compra', senão escrever a mensagem 'Efetuar compra'.")
+qatual = input("Quantidade atual em estoque:")
+qatual = int(qatual)
+qmax = input("Quantidade máxima em estoque:")
+qmax = int(qmax)
+qmin = input("Quantidade mínima em estoque:")
+qmin = int(qmin)
+
+qmedia = (qmax + qmin) / 2
+
+if qatual >= qmedia:
+    print("Não efetuar compra")
+else:
+    print("Efetuar compra")
+
+25.
+print("Ler 3 valores (considere que não serão informados valores iguais) e escrevê-los em ordem crescente.")
+x = input("1o valor:")
+x = int(x)
+y = input("2o valor:")
+y = int(y)
+z = input("3o valor:")
+z = int(z)
+
+n = x, y, z
+print(sorted(n))
+
+26.
+print("Ler 3 valores (A, B e C) representando as medidas dos lados de um triângulo e escrever se formam ou não um triângulo.")
+x = int(input("1o lado:"))
+y = int(input("2o lado:"))
+z = int(input("3o lado:"))
+
+if (x < y + z) and (z < x + y) and (y < x + z):
+    print("É um triângulo")
+else:
+    print("Não é um triângulo")
+
+27.
+print("Ler o nome de 2 times e o número de gols marcados na partida (para cada time). Escrever o nome do vencedor. Caso não haja vencedor deverá ser impressa a palavra EMPATE.")
+time1 = input("1o time:")
+time2 = input("2o time:")
+gols1 = int(input(f"Quantos gols o time {time1} fez?"))
+gols2 = int(input(f"Quantos gols o time {time2} fez?"))
+
+if gols1 > gols2:
+    print(f"O time {time1} ganhou!")
+elif gols1 < gols2:
+    print(f"O time {time2} ganhou!")
+else:
+    print("EMPATE")
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+QUESTÃO DESAFIO.
+
+nmr_empregado = int(input("Código de empregado:"))
+nascimento = int(input("Ano de nascimento:"))
+ano_ingresso = int(input("Ano de seu ingresso na empresa:"))
+ano_atual = 2022
+
+idade = ano_atual - nascimento
+anos_trabalhando = ano_atual - ano_ingresso
+
+if (idade >= 65) or (anos_trabalhando >= 30) or (idade >= 60 and anos_trabalhando >= 25 ):
+    print("Requerer aposentadoria")
+else:
+    print("Não requerer")
+

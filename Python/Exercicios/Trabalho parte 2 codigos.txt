@@ -1,0 +1,249 @@
+1.
+#Escreva um algoritmo para ler 2 valores e se o segundo valor informado for ZERO, deve ser lido um novo valor, ou seja, para o segundo valor não pode ser aceito o valor zero e imprimir o resultado da divisão do primeiro valor lido pelo segundo valor lido.
+
+x = float(input("1o valor:"))
+y = float(input("2o valor:"))
+
+while y == 0 :
+    print("Escreva um valor diferente de 0")
+    y = int(input("2o novo valor:"))
+print(f"O valor da divisão é: {x/y}")
+
+2.
+#Escreva um algoritmo para ler as notas da 1a. e 2a. avaliações de um aluno, calcule e imprima a média (simples) desse aluno. Só devem ser aceitos valores válidos durante a leitura (0 a 10) para cada nota.
+
+h = True
+while h:
+    n1 = int(input("1a nota:"))
+    while n1 > 10 or n1 < 0:
+        print("Primeira nota inválida")
+        n1 = int(input("1a nota:"))
+
+    n2 = int(input("2a nota:"))
+    while n2 > 10 or n2 < 0:
+        print("Segunda nota inválida")
+        n2 = int(input("2a nota:"))
+
+    else:
+        print(f"A média é {(n1+n2)/2}")
+    novo_calc = input("Novo cálculo? (s/n)")
+    
+    if novo_calc == "n":
+        h = False
+
+3.
+#Escreva um algoritmo para imprimir os números de 1 (inclusive) a 10 (inclusive) em ordem crescente.
+
+print(list(range(1, 10+1)))
+
+4.
+#Escreva um algoritmo para imprimir os números de 1 (inclusive) a 10 (inclusive) em ordem decrescente.
+
+print(list(range(10, 1-1 , -1)))
+
+5.
+#Escreva um algoritmo para imprimir os 10 primeiros números inteiros maiores que 100. 
+
+print(list(range(101, 110 + 1)))
+
+6.
+#Ler um valor N e imprimir todos os valores inteiros entre 1 (inclusive) e N (inclusive). Garanta que o N será sempre maior que ZERO.
+
+N = int(input("Valor de N:"))
+while N <= 0:
+    print("Coloque um valor maior que 0 para N")
+    N = int(input("Valor de N:"))
+else:
+    print(list(range(1 , N+1)))
+
+7.
+#Modifique o exercício anterior para aceitar somente valores maiores que 0 para N. Caso o valor informado (para N) não seja maior que 0, deverá ser lido um novo valor para N. 
+
+N = int(input("Valor de N:"))
+while N <= 0:
+    print("Coloque um valor maior que 0 para N")
+    N = int(input("Valor de N:"))
+else:
+    print(list(range(1 , N+1)))
+
+8.
+#Escreva um algoritmo que calcule e imprima a tabuada do 8 (1 a 10).
+
+for v in range(1, 11):
+    print(f"{8} x {v} = {8*v}")
+
+9.
+#Ler um valor inteiro (aceitar somente valores entre 1 e 10) e escrever a tabuada de 1 a 10 do valor lido.
+
+x = int(input("Valor a ser tabuado:"))
+while x > 10 or x < 0 :
+    x = int(input("VALOR INVÁLIDO! Escaolha um valor entre 0 a 10\nTabuada do valor:"))
+for v in range(1, 11):
+    print(f"{x} x {v} = {x*v}")
+
+10.
+#Ler 10 valores e escrever quantos desses valores lidos são NEGATIVOS. 
+
+c = 0
+
+for x in range(5):
+    y = int(input('informe um valor :'))
+    if y < 0:
+        c += 1
+print(f"Há {c} valor(es) negativos")
+
+11.
+#Ler 10 valores e escrever quantos desses valores lidos estão no intervalo [10,20] (inlcuindo os valores 10 e 20 no intervalo) e quantos deles estão fora deste intervalo.
+
+dentro = 0
+fora = 0
+
+for x in range(10):
+    y = int(input('informe um valor :'))
+    if y in range(10 ,21):
+        dentro += 1
+    else:
+        fora += 1
+print(f"Há {dentro} valor(es) entre 10 e 20 e {fora} valor(es) fora desse intervalo")
+
+12.
+#"Ler 10 valores, calcular e escrever a média aritmética desses valores lidos.
+
+lista_valores = []
+soma = 0 
+
+for indice in range(10):
+    lista_valores.insert(indice, float(input(f"Coloque o {indice + 1} valor")))
+
+for num in lista_valores:
+    soma += num
+print(f"A média é {soma / 10}")
+
+
+13.
+#Ler o número de alunos existentes em uma turma e, após isto, ler as notas destes alunos, calcular e escrever a média aritmética dessas notas lidas.
+
+total_alunos = int(input("Quantidade de alunos:"))
+notas_aluno = []
+total_notas = 0
+
+for ind_aluno in range(total_alunos):
+    notas_aluno.insert(ind_aluno,int(input(f'Nota do aluno {ind_aluno + 1} :')))
+    
+for nota_atual in notas_aluno:
+    total_notas += nota_atual
+print(f"A média é {total_notas / total_alunos}")
+
+14.
+#Escreva um algoritmo para ler 10 números e ao final da leitura escrever a soma total dos 10 números lidos.
+
+lista_valores = []
+soma = 0 
+
+for indice in range(10):
+    lista_valores.insert(indice, float(input(f"Coloque o {indice + 1} valor")))
+
+for num in lista_valores:
+    soma += num
+print(f"A soma dos números é {soma}")
+
+15.
+#Escreva um algoritmo para ler 10 números. Todos os números lidos com valor inferior a 40 devem ser somados. Escreva o valor final da soma efetuada.
+
+soma = 0 
+
+for indice in range(10):
+    valor = int(input(f"Coloque o {indice + 1} valor"))
+    
+    if valor <= 40:
+        soma += valor
+
+print(f"A soma dos números é {soma}")
+
+16.
+#Ler 2 valores, calcular e escrever a soma dos inteiros existentes entre os 2 valores lidos (incluindo os valores lidos na soma). Garanta que o segundo valor lido será sempre maior que o primeiro valor lido.
+
+v1 = int(input("Coloque o 1o valor"))
+v2 = int(input("Coloque o 2o valor"))
+while v2 < v1:
+    v2 = int(input(f"VALOR INVÁLIDO! Selecione um valor maior que o 1o valor aka: {v1}"))
+
+soma = 0
+
+for num in range(v1, v2+1):
+    soma += num
+
+print(f"O valor da soma é {soma}")
+
+17.
+#Ler 2 valores, calcular e escrever a soma dos inteiros existentes entre os 2 valores lidos (incluindo os valores lidos na soma). Garanta que o segundo valor lido será sempre maior que o primeiro valor lido.
+
+soma = 0 
+
+for indice in range(15, 101):
+    soma += indice
+
+media = soma / len(range(15, 101)
+
+print(f"Média = {media}")
+
+18.
+#Uma loja está levantando o valor total de todas as mercadorias em estoque. Escreva um algoritmo que permita a entrada das seguintes informações:o número total de mercadorias no estoque; o valor de cada mercadoria. Ao final imprimir o valor total em estoque e a média de valor das mercadorias.
+
+total_mercadorias = int(input("Total de mercadorias: "))
+lista_valores = []
+soma = 0 
+
+for x in range(total_mercadorias):
+    lista_valores.insert(x,int(input(f"Valor da mercadoria número {x + 1}: ")))
+
+for y in lista_valores:
+    soma += y
+
+print(f"Média de valor das mercadorias: {soma / total_mercadorias}")
+print(f"Valor total em estoque: {soma}")
+
+19.
+#O mesmo exercício anterior, mas agora não será informado o número de mercadorias em estoque. Então o funcionamento deverá ser da seguinte forma: ler o valor da mercadoria e perguntar ‘MAIS MERCADORIAS (S/N)?’. Ao final, imprimir o valor total em estoque e a média de valor das mercadorias em estoque.
+
+qnt_mercadoria = 0
+valor_total = 0
+
+h = True
+while h:
+    valor_mercadoria = int(input("Qual o valor da mercadoria?"))
+    valor_total += valor_mercadoria
+    qnt_mercadoria += 1
+    
+    resposta = input("Mais Mercadorias? (S/N)")
+    if resposta == "n":
+        break
+
+print(f"A média é: {valor_total / qnt_mercadoria}")
+print(f"O valor total é: {valor_total}")
+
+20.
+#Escreva um algoritmo que imprima a tabuada (de 1 a 10) para os números de 1 a 10. 
+
+x = 1
+y = 1
+
+while (x > 0 and x < 12) and (y < 11 and y > 0):
+    print(f"{x} x {y} = {x * y}")
+    x += 1
+    if x == 11:
+        x = 1
+        y += 1
+        print("\n")
+
+-------------------------------------------------------------------------------------------------------
+DESAFIO
+-------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
